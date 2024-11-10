@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Auto Append",
+    "version": "1.0",
+    "description": "Automatically appends custom text to each ChatGPT message.",
+    "permissions": ["activeTab", "storage"],
+    "content_scripts": [
+      {
+        "matches": ["https://chatgpt.com/c/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
